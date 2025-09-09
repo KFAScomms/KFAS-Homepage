@@ -2733,10 +2733,11 @@ h6 {
 }
 
 .developBg {
-    background-image: url('../img/blueBg.png');
+    background-color: #1E2D44;
+/*     background-image: url('../img/blueBg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
     padding: 100px 0px;
     position: relative;
     z-index: 2;
