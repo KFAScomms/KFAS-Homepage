@@ -326,14 +326,26 @@ if (chartCtx) {
     },
     plugins: [ChartDataLabels]
   });
-}
 
 const menuToggle = document.getElementById("menuToggle");
-const navbarMenu = document.getElementById("navbarMenu");
+    const navbarMenu = document.getElementById("navbarMenu");
+    const header = document.querySelector(".header");
 
-menuToggle.addEventListener("click", () => {
-  navbarMenu.classList.toggle("active");
-});
+    menuToggle.addEventListener("click", function () {
+      navbarMenu.classList.toggle("active");
+      header.classList.toggle("active");
+    });
+
+    // Optional: close menu when link is clicked (mobile)
+    document.querySelectorAll(".navbar-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navbarMenu.classList.remove("active");
+        header.classList.remove("active");
+      });
+    });
+}
+
+
 
 const header = document.querySelector(".header");
 
