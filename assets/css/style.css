@@ -1,4 +1,8 @@
 /* Dubai Font Face Definitions */
+html{
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Dubai';
     src: url('../fonts/Dubai-Light.ttf') format('truetype');
@@ -1398,7 +1402,7 @@ h6 {
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    line-height: 160%;
+    line-height: 140%;
     letter-spacing: 0%;
     color: #5a5a5a;
     margin-bottom: 20px;
@@ -1522,7 +1526,7 @@ h6 {
 }
 
 .logo-main-img {
-    width: 120px;
+    width: 150px;
     height: auto;
 }
 
@@ -1800,9 +1804,10 @@ h6 {
 }
 
 .flag-icon {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    margin-right: 20px;
 }
 
 .bar-text {
@@ -2383,6 +2388,12 @@ h6 {
     .owl-next {
         right: -20px;
     }
+    .navbar-links ul {
+    flex-wrap: nowrap;        /* prevent wrapping */
+    overflow-x: auto;         /* enable horizontal scroll */
+    white-space: nowrap;      /* keep items in one line */
+    /* -webkit-overflow-scrolling: touch; smooth scroll on iOS */
+  }
 }
 
 @media (max-width:1025px){
@@ -2627,6 +2638,15 @@ h6 {
     }
     .navbar-links a{
         font-size: 12px;
+    }
+      .navbar-links ul {
+    flex-wrap: nowrap;        /* prevent wrapping */
+    overflow-x: auto;         /* enable horizontal scroll */
+    white-space: nowrap;      /* keep items in one line */
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+   }
+     .navbar-links ul li {
+  flex: 0 0 auto;    /* keep li size fixed instead of shrinking */
     }
 
 }
@@ -3062,7 +3082,11 @@ margin-top: 100px;
   margin: 0;
   padding: 0;
   display: flex;
-  /* gap: 20px; */
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.navbar-links ul li{
+flex: 0 0 auto;    /* keep li size fixed instead of shrinking */
 }
 
 .navbar-links a {
@@ -3077,7 +3101,7 @@ margin-top: 100px;
 .nav1,.nav2,.nav3,.nav4,.nav5,.nav6{
     background-color: orange;
     position: relative;
-    width: 100%;
+    width: auto;
     height: auto;
     padding: 20px;
     margin: 10px 0px;
@@ -3107,31 +3131,20 @@ margin-top: 100px;
     background-color: #FFDBDCEE;
     border-bottom: 3px solid  #D25559;
 }
-/* .nav1:hover{
-    height: 82px;
-} */
-
-/* .nav2{
-    background-color: orange;
-    width: 100%;
-    height: auto;
-    padding: 20px;
-} */
-/* .nav2:hover{
-    height: 82px;
-} */
 
 /* Desktop hover effect */
 @media (min-width: 992px) {
-  /* .header:hover .navbar-links {
-    display: block;
-  } */
+
   .navbar-links ul {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    /* gap: 20px; */
+    gap: 10px;
   }
+  .navbar-links ul li {
+  flex: 1 0 auto;    /* keep li size fixed instead of shrinking */
+    }
 }
 
 /* Mobile: vertical stack */
@@ -3184,6 +3197,18 @@ margin-top: 100px;
   .menu-icon img {
     width: 20px;
   }
+  .logo-img{
+    margin-left: 10px;
+  }
+    .navbar-links ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;  
+    height: 100vh;    
+  }
+    .navbar-links ul li {
+  flex: 0 0 auto;    
+    }
 }
 
 .menu-icon {
@@ -3203,6 +3228,5 @@ border: 1px solid #1E2D4433;
     color: #000000;
     font-weight: 600;
     font-family: 'Dubai';
-    font-size: 16px;
+    font-size: 12px;
   }
-
