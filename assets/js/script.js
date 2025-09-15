@@ -60,231 +60,392 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // GCC Competitiveness Chart
+  // const ctx = document.getElementById("gccCompetitivenessChart");
+  // if (ctx) {
+  //   // Create flag images for each country
+  //   const flagImages = {};
+  //   const countries = ["Kuwait", "Qatar", "Saudi Arabia", "Bahrain", "UAE"];
+  //   const flagColors = {
+  //     Kuwait: ["#007A3D", "#FFFFFF", "#CE1126"], // Green, White, Red
+  //     Qatar: ["#8D1B3D", "#FFFFFF"], // Maroon, White
+  //     "Saudi Arabia": ["#006C35", "#FFFFFF"], // Green, White
+  //     Bahrain: ["#CE1126", "#FFFFFF"], // Red, White
+  //     UAE: ["#00732F", "#FFFFFF", "#CE1126"], // Green, White, Red
+  //   };
+
+  //   // Create canvas elements for flags
+  //   countries.forEach((country) => {
+  //     const flagCanvas = document.createElement("canvas");
+  //     flagCanvas.width = 32; // Increased from 24
+  //     flagCanvas.height = 22; // Increased from 16
+  //     const flagCtx = flagCanvas.getContext("2d");
+
+  //     // Simple flag representations (scaled up)
+  //     if (country === "Kuwait") {
+  //       flagCtx.fillStyle = "#007A3D";
+  //       flagCtx.fillRect(0, 0, 32, 7);
+  //       flagCtx.fillStyle = "#FFFFFF";
+  //       flagCtx.fillRect(0, 7, 32, 8);
+  //       flagCtx.fillStyle = "#CE1126";
+  //       flagCtx.fillRect(0, 15, 32, 7);
+  //     } else if (country === "Qatar") {
+  //       flagCtx.fillStyle = "#8D1B3D";
+  //       flagCtx.fillRect(0, 0, 32, 22);
+  //       flagCtx.fillStyle = "#FFFFFF";
+  //       flagCtx.fillRect(0, 0, 11, 22);
+  //     } else if (country === "Saudi Arabia") {
+  //       flagCtx.fillStyle = "#006C35";
+  //       flagCtx.fillRect(0, 0, 32, 22);
+  //     } else if (country === "Bahrain") {
+  //       flagCtx.fillStyle = "#CE1126";
+  //       flagCtx.fillRect(0, 0, 32, 11);
+  //       flagCtx.fillStyle = "#FFFFFF";
+  //       flagCtx.fillRect(0, 11, 32, 11);
+  //     } else if (country === "UAE") {
+  //       flagCtx.fillStyle = "#CE1126";
+  //       flagCtx.fillRect(0, 0, 11, 22);
+  //       flagCtx.fillStyle = "#00732F";
+  //       flagCtx.fillRect(11, 0, 21, 7);
+  //       flagCtx.fillStyle = "#FFFFFF";
+  //       flagCtx.fillRect(11, 7, 21, 8);
+  //       flagCtx.fillStyle = "#000000";
+  //       flagCtx.fillRect(11, 15, 21, 7);
+  //     }
+
+  //     flagImages[country] = flagCanvas;
+  //   });
+
+  //   // Data for GCC countries based on the image
+  //   const chartData = {
+  //     labels: countries,
+  //     datasets: [
+  //       {
+  //         label: "World Competitiveness Ranking",
+  //         data: [37, 21, 16, 11, 7], // Rankings from the image
+  //         borderColor: "#4A90E2",
+  //         backgroundColor: "rgba(74, 144, 226, 0.1)",
+  //         borderWidth: 3,
+  //         fill: true,
+  //         tension: 0.4,
+  //         pointBackgroundColor: "#4A90E2",
+  //         pointBorderColor: "#ffffff",
+  //         pointBorderWidth: 2,
+  //         pointRadius: 0, // Hide default points
+  //         pointHoverRadius: 0,
+  //       },
+  //     ],
+  //   };
+
+  //   const config = {
+  //     type: "line",
+  //     data: chartData,
+  //     options: {
+  //       responsive: true,
+  //       maintainAspectRatio: false,
+  //       layout: {
+  //         padding: {
+  //           left: 10,
+  //           right: 10,
+  //           top: 10,
+  //           bottom: 10,
+  //         },
+  //       },
+  //       interaction: {
+  //         intersect: false,
+  //         mode: "index",
+  //       },
+  //       plugins: {
+  //         legend: {
+  //           display: false,
+  //         },
+  //         tooltip: {
+  //           backgroundColor: "rgba(0, 0, 0, 0.8)",
+  //           titleColor: "#ffffff",
+  //           bodyColor: "#ffffff",
+  //           borderColor: "#4A90E2",
+  //           borderWidth: 1,
+  //           displayColors: false,
+  //           callbacks: {
+  //             title: function (context) {
+  //               return context[0].label;
+  //             },
+  //             label: function (context) {
+  //               return `Ranking: ${context.parsed.y}${getOrdinalSuffix(
+  //                 context.parsed.y
+  //               )}`;
+  //             },
+  //           },
+  //         },
+  //       },
+  //       animation: {
+  //         onComplete: function () {
+  //           drawFlags(this);
+  //         },
+  //         onProgress: function () {
+  //           drawFlags(this);
+  //         },
+  //       },
+  //       scales: {
+  //         y: {
+  //           reverse: false, // Normal direction - higher rankings at top
+  //           beginAtZero: false,
+  //           min: 5,
+  //           max: 40,
+  //           ticks: {
+  //             display: false, // Hide Y-axis labels
+  //           },
+  //           grid: {
+  //             color: "rgba(0, 0, 0, 0.05)",
+  //             drawBorder: false,
+  //           },
+  //           title: {
+  //             display: false, // Hide Y-axis title
+  //           },
+  //         },
+  //         x: {
+  //           ticks: {
+  //             display: false, // Hide X-axis labels
+  //           },
+  //           grid: {
+  //             display: false,
+  //           },
+  //           title: {
+  //             display: false, // Hide X-axis title
+  //           },
+  //         },
+  //       },
+  //       elements: {
+  //         point: {
+  //           hoverBackgroundColor: "#4A90E2",
+  //           hoverBorderColor: "#ffffff",
+  //         },
+  //       },
+  //     },
+  //   };
+
+  //   // Helper function to add ordinal suffix (st, nd, rd, th)
+  //   function getOrdinalSuffix(num) {
+  //     const j = num % 10;
+  //     const k = num % 100;
+  //     if (j == 1 && k != 11) return "st";
+  //     if (j == 2 && k != 12) return "nd";
+  //     if (j == 3 && k != 13) return "rd";
+  //     return "th";
+  //   }
+
+  //   // Function to draw flags on chart
+  //   function drawFlags(chart) {
+  //     const ctx = chart.ctx;
+
+  //     chart.data.datasets.forEach((dataset, datasetIndex) => {
+  //       const meta = chart.getDatasetMeta(datasetIndex);
+  //       meta.data.forEach((point, index) => {
+  //         const country = chart.data.labels[index];
+  //         const flagImage = flagImages[country];
+
+  //         if (flagImage && point) {
+  //           const x = point.x - 16; // Center the larger flag
+  //           const y = point.y - 11;
+
+  //           // Draw white circle background (larger)
+  //           ctx.beginPath();
+  //           ctx.arc(point.x, point.y, 18, 0, 2 * Math.PI);
+  //           ctx.fillStyle = "white";
+  //           ctx.fill();
+  //           ctx.strokeStyle = "#4A90E2";
+  //           ctx.lineWidth = 2;
+  //           ctx.stroke();
+
+  //           // Draw flag (larger size)
+  //           ctx.drawImage(flagImage, x, y, 32, 22);
+
+  //           // Draw ranking number above
+  //           ctx.fillStyle = "#333";
+  //           ctx.font = "bold 18px Dubai, Arial, sans-serif";
+  //           ctx.textAlign = "center";
+  //           const ranking = dataset.data[index];
+  //           ctx.fillText(
+  //             ranking + getOrdinalSuffix(ranking),
+  //             point.x,
+  //             point.y - 25
+  //           );
+  //         }
+  //       });
+  //     });
+  //   }
+
+  //   const chart = new Chart(ctx, config);
+
+  //   // Add event listeners to redraw flags on hover interactions
+  //   ctx.canvas.addEventListener("mousemove", function () {
+  //     setTimeout(() => drawFlags(chart), 10);
+  //   });
+
+  //   ctx.canvas.addEventListener("mouseout", function () {
+  //     setTimeout(() => drawFlags(chart), 10);
+  //   });
+  // }
+
+
   const ctx = document.getElementById("gccCompetitivenessChart");
-  if (ctx) {
-    // Create flag images for each country
-    const flagImages = {};
-    const countries = ["Kuwait", "Qatar", "Saudi Arabia", "Bahrain", "UAE"];
-    const flagColors = {
-      Kuwait: ["#007A3D", "#FFFFFF", "#CE1126"], // Green, White, Red
-      Qatar: ["#8D1B3D", "#FFFFFF"], // Maroon, White
-      "Saudi Arabia": ["#006C35", "#FFFFFF"], // Green, White
-      Bahrain: ["#CE1126", "#FFFFFF"], // Red, White
-      UAE: ["#00732F", "#FFFFFF", "#CE1126"], // Green, White, Red
-    };
+if (ctx) {
+  // Country list
+  const countries = ["Kuwait", "Qatar", "Saudi Arabia", "Bahrain", "UAE"];
 
-    // Create canvas elements for flags
-    countries.forEach((country) => {
-      const flagCanvas = document.createElement("canvas");
-      flagCanvas.width = 32; // Increased from 24
-      flagCanvas.height = 22; // Increased from 16
-      const flagCtx = flagCanvas.getContext("2d");
+  // Map country to PNG flag image paths
+  const flagUrls = {
+    Kuwait: "assets/img/kuwaitflag.png",
+    Qatar: "assets/img/Qatar.png",          // ✅ ensure this is Qatar's flag, not Oman
+    "Saudi Arabia": "assets/img/Saudi.png",
+    Bahrain: "assets/img/Bahrain.png",
+    UAE: "assets/img/Emirates.png",
+  };
 
-      // Simple flag representations (scaled up)
-      if (country === "Kuwait") {
-        flagCtx.fillStyle = "#007A3D";
-        flagCtx.fillRect(0, 0, 32, 7);
-        flagCtx.fillStyle = "#FFFFFF";
-        flagCtx.fillRect(0, 7, 32, 8);
-        flagCtx.fillStyle = "#CE1126";
-        flagCtx.fillRect(0, 15, 32, 7);
-      } else if (country === "Qatar") {
-        flagCtx.fillStyle = "#8D1B3D";
-        flagCtx.fillRect(0, 0, 32, 22);
-        flagCtx.fillStyle = "#FFFFFF";
-        flagCtx.fillRect(0, 0, 11, 22);
-      } else if (country === "Saudi Arabia") {
-        flagCtx.fillStyle = "#006C35";
-        flagCtx.fillRect(0, 0, 32, 22);
-      } else if (country === "Bahrain") {
-        flagCtx.fillStyle = "#CE1126";
-        flagCtx.fillRect(0, 0, 32, 11);
-        flagCtx.fillStyle = "#FFFFFF";
-        flagCtx.fillRect(0, 11, 32, 11);
-      } else if (country === "UAE") {
-        flagCtx.fillStyle = "#CE1126";
-        flagCtx.fillRect(0, 0, 11, 22);
-        flagCtx.fillStyle = "#00732F";
-        flagCtx.fillRect(11, 0, 21, 7);
-        flagCtx.fillStyle = "#FFFFFF";
-        flagCtx.fillRect(11, 7, 21, 8);
-        flagCtx.fillStyle = "#000000";
-        flagCtx.fillRect(11, 15, 21, 7);
+  // Preload images
+  const flagImages = {};
+  let loadedImages = 0;
+
+  countries.forEach((country) => {
+    const img = new Image();
+    img.src = flagUrls[country];
+    img.onload = () => {
+      loadedImages++;
+      if (loadedImages === countries.length) {
+        chart.update(); // redraw chart once all flags loaded
       }
-
-      flagImages[country] = flagCanvas;
-    });
-
-    // Data for GCC countries based on the image
-    const chartData = {
-      labels: countries,
-      datasets: [
-        {
-          label: "World Competitiveness Ranking",
-          data: [37, 21, 16, 11, 7], // Rankings from the image
-          borderColor: "#4A90E2",
-          backgroundColor: "rgba(74, 144, 226, 0.1)",
-          borderWidth: 3,
-          fill: true,
-          tension: 0.4,
-          pointBackgroundColor: "#4A90E2",
-          pointBorderColor: "#ffffff",
-          pointBorderWidth: 2,
-          pointRadius: 0, // Hide default points
-          pointHoverRadius: 0,
-        },
-      ],
     };
+    flagImages[country] = img;
+  });
 
-    const config = {
-      type: "line",
-      data: chartData,
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        layout: {
-          padding: {
-            left: 10,
-            right: 10,
-            top: 10,
-            bottom: 10,
-          },
-        },
-        interaction: {
-          intersect: false,
-          mode: "index",
-        },
-        plugins: {
-          legend: {
-            display: false,
-          },
-          tooltip: {
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
-            titleColor: "#ffffff",
-            bodyColor: "#ffffff",
-            borderColor: "#4A90E2",
-            borderWidth: 1,
-            displayColors: false,
-            callbacks: {
-              title: function (context) {
-                return context[0].label;
-              },
-              label: function (context) {
-                return `Ranking: ${context.parsed.y}${getOrdinalSuffix(
-                  context.parsed.y
-                )}`;
-              },
-            },
-          },
-        },
-        animation: {
-          onComplete: function () {
-            drawFlags(this);
-          },
-          onProgress: function () {
-            drawFlags(this);
-          },
-        },
-        scales: {
-          y: {
-            reverse: false, // Normal direction - higher rankings at top
-            beginAtZero: false,
-            min: 5,
-            max: 40,
-            ticks: {
-              display: false, // Hide Y-axis labels
-            },
-            grid: {
-              color: "rgba(0, 0, 0, 0.05)",
-              drawBorder: false,
-            },
-            title: {
-              display: false, // Hide Y-axis title
-            },
-          },
-          x: {
-            ticks: {
-              display: false, // Hide X-axis labels
-            },
-            grid: {
-              display: false,
-            },
-            title: {
-              display: false, // Hide X-axis title
-            },
-          },
-        },
-        elements: {
-          point: {
-            hoverBackgroundColor: "#4A90E2",
-            hoverBorderColor: "#ffffff",
+  // Data for GCC countries
+// Data for GCC countries
+const chartData = {
+  labels: countries,
+  datasets: [
+    {
+      label: "World Competitiveness Ranking",
+      data: [37, 21, 16, 11, 7], // Rankings
+      borderColor: "#4A90E2",
+      backgroundColor: "rgba(74, 144, 226, 0.1)",
+      borderWidth: 3,
+      fill: true,
+      tension: 0.4,
+      pointRadius: 14,       // invisible hover hitbox
+      pointHoverRadius: 18,  // hover area a bit larger
+      pointBackgroundColor: "transparent",
+      pointBorderColor: "transparent",
+    },
+  ],
+};
+
+
+  const config = {
+    type: "line",
+    data: chartData,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
+          titleColor: "#fff",
+          bodyColor: "#fff",
+          borderColor: "#4A90E2",
+          borderWidth: 1,
+          displayColors: false,
+          callbacks: {
+            title: (context) => context[0].label,
+            label: (context) =>
+              `Ranking: ${context.parsed.y}${getOrdinalSuffix(context.parsed.y)}`,
           },
         },
       },
-    };
+      animation: {
+        onComplete: function () {
+          drawFlags(this);
+        },
+        onProgress: function () {
+          drawFlags(this);
+        },
+      },
+      scales: {
+        y: {
+          min: 5,
+          max: 40,
+          ticks: { display: false },
+          grid: { color: "rgba(0,0,0,0.05)", drawBorder: false },
+        },
+        x: {
+          ticks: { display: false },
+          grid: { display: false },
+        },
+      },
+    },
+  };
 
-    // Helper function to add ordinal suffix (st, nd, rd, th)
-    function getOrdinalSuffix(num) {
-      const j = num % 10;
-      const k = num % 100;
-      if (j == 1 && k != 11) return "st";
-      if (j == 2 && k != 12) return "nd";
-      if (j == 3 && k != 13) return "rd";
-      return "th";
-    }
+  // Helper: ordinal suffix
+  function getOrdinalSuffix(num) {
+    const j = num % 10,
+      k = num % 100;
+    if (j == 1 && k != 11) return "st";
+    if (j == 2 && k != 12) return "nd";
+    if (j == 3 && k != 13) return "rd";
+    return "th";
+  }
 
-    // Function to draw flags on chart
-    function drawFlags(chart) {
-      const ctx = chart.ctx;
+  // Draw PNG flags
+  function drawFlags(chart) {
+    const ctx = chart.ctx;
+    chart.data.datasets.forEach((dataset, datasetIndex) => {
+      const meta = chart.getDatasetMeta(datasetIndex);
+      meta.data.forEach((point, index) => {
+        const country = chart.data.labels[index];
+        const flagImage = flagImages[country];
 
-      chart.data.datasets.forEach((dataset, datasetIndex) => {
-        const meta = chart.getDatasetMeta(datasetIndex);
-        meta.data.forEach((point, index) => {
-          const country = chart.data.labels[index];
-          const flagImage = flagImages[country];
+        if (flagImage && point) {
+          const x = point.x - 16;
+          const y = point.y - 11;
 
-          if (flagImage && point) {
-            const x = point.x - 16; // Center the larger flag
-            const y = point.y - 11;
+          // White circle background
+          ctx.beginPath();
+          ctx.arc(point.x, point.y, 18, 0, 2 * Math.PI);
+          ctx.fillStyle = "white";
+          ctx.fill();
+          ctx.strokeStyle = "#4A90E2";
+          ctx.lineWidth = 2;
+          ctx.stroke();
 
-            // Draw white circle background (larger)
-            ctx.beginPath();
-            ctx.arc(point.x, point.y, 18, 0, 2 * Math.PI);
-            ctx.fillStyle = "white";
-            ctx.fill();
-            ctx.strokeStyle = "#4A90E2";
-            ctx.lineWidth = 2;
-            ctx.stroke();
+          // Draw PNG flag
+          ctx.drawImage(flagImage, x, y, 32, 22);
 
-            // Draw flag (larger size)
-            ctx.drawImage(flagImage, x, y, 32, 22);
-
-            // Draw ranking number above
-            ctx.fillStyle = "#333";
-            ctx.font = "bold 18px Dubai, Arial, sans-serif";
-            ctx.textAlign = "center";
-            const ranking = dataset.data[index];
-            ctx.fillText(
-              ranking + getOrdinalSuffix(ranking),
-              point.x,
-              point.y - 25
-            );
-          }
-        });
+          // Draw ranking above
+          ctx.fillStyle = "#333";
+          ctx.font = "bold 16px Arial, sans-serif";
+          ctx.textAlign = "center";
+          const ranking = dataset.data[index];
+          ctx.fillText(
+            ranking + getOrdinalSuffix(ranking),
+            point.x,
+            point.y - 28
+          );
+        }
       });
-    }
-
-    const chart = new Chart(ctx, config);
-
-    // Add event listeners to redraw flags on hover interactions
-    ctx.canvas.addEventListener("mousemove", function () {
-      setTimeout(() => drawFlags(chart), 10);
-    });
-
-    ctx.canvas.addEventListener("mouseout", function () {
-      setTimeout(() => drawFlags(chart), 10);
     });
   }
+
+  // Create chart
+  const chart = new Chart(ctx, config);
+
+  // Redraw on hover
+  ctx.canvas.addEventListener("mousemove", () =>
+    setTimeout(() => drawFlags(chart), 10)
+  );
+  ctx.canvas.addEventListener("mouseout", () =>
+    setTimeout(() => drawFlags(chart), 10)
+  );
+}
+
 
   
 
