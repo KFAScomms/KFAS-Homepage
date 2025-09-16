@@ -23,44 +23,68 @@
 
 <body>
 
-<header class="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="d-flex justify-content-between align-items-center">
-          <!-- Logo -->
-          <div class="logo-section">
-            <div class="d-flex align-items-center">
-              <!-- <div class="logo-icon">
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <div class="logo-section">
+              <div class="d-flex align-items-center">
+                <!-- <div class="logo-icon">
                 <div class="logo-star"></div>
               </div> -->
-              <div class="logo-text">
-                <img src="assets/img/logo.png" class="logo-img" alt="">
+                <div class="logo-text">
+                  <img src="assets/img/logo.png" class="logo-img" alt="">
+                </div>
               </div>
+            </div>
+
+            <!-- Menu icon (always visible on mobile) -->
+            <div class="menu-icon" id="menuToggle">
+              <img src="./assets/img/menulines.png" alt="menu">
             </div>
           </div>
 
-          <!-- Menu icon (always visible on mobile) -->
-          <div class="menu-icon" id="menuToggle">
-            <img src="./assets/img/menulines.png" alt="menu">
-          </div>
+          <!-- Navbar -->
+          <nav class="navbar-links" id="navbarMenu">
+            <ul>
+              <li class="nav2"><a href="#">
+                <!-- bottom-frame -->
+                <!-- Intorduction -->
+                 Home
+              </a></li>
+              <li class="nav1"><a href="#">
+                <!-- About -->
+                <!-- About Us -->
+                 KFAS Pure Portal
+              </a></li>
+              <li class="nav3"><a href="#">
+                <!-- ExecutiveSummary -->
+                <!-- Executive Summary -->
+                 Events
+              </a></li>
+              <li class="nav4"><a href="#">
+                <!-- insights-section -->
+                <!-- GII 2024 Report -->
+                 Organization
+              </a></li>
+              <li class="nav5"><a href="#">
+                <!-- methodology -->
+                <!-- Competitiveness Index -->
+                 Publication
+              </a></li>
+              <li class="nav6"><a href="#">
+                <!-- developBg -->
+                <!-- Research and Development -->
+                 Contact Us
+              </a></li>
+            </ul>
+          </nav>
         </div>
-
-        <!-- Navbar -->
-        <nav class="navbar-links" id="navbarMenu">
-          <ul>
-            <li class="nav2"><a href="#bottom-frame">Intorduction</a></li>
-            <li class="nav1"><a href="#About">About Us</a></li>
-            <li class="nav3"><a href="#ExecutiveSummary">Executive Summary</a></li>
-            <li class="nav4"><a href="#insights-section">GII 2024 Report</a></li>
-            <li class="nav5"><a href="#methodology">Competitiveness Index</a></li>
-            <li class="nav6"><a href="#developBg">Research and Development</a></li>
-          </ul>
-        </nav>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <!-- Main Cover Section -->
   <div class="main-cover">
@@ -82,7 +106,10 @@
         <div class="hero-actions">
           <button class="download-btn">
             Download Full Report
-            <i class="bi bi-arrow-right arrow-icon"></i>
+            <div class="whiteCircle">
+              <img src="./assets/img/arrow.png" alt="">
+            </div>
+            <!-- <i class="bi bi-arrow-right arrow-icon"></i> -->
           </button>
         </div>
       </div>
@@ -92,6 +119,7 @@
     <section class="bottom-frame" id="bottom-frame">
       <div class="container">
         <div class="frame-container">
+          <img class="dots" src="./assets/img/threedots.png" alt="">
           <img src="assets/img/686a4986529fe32b6c4897429c6aec598abaa616.png" alt="Bottom Frame" class="frame-img" />
         </div>
       </div>
@@ -137,13 +165,16 @@
             </div>
             <button class="explore-btn">
               Explore more
-              <i class="bi bi-chevron-double-right explore-icon"></i>
+              <div class="whiteCircle ms-2">
+                <img src="./assets/img/arrow.png" alt="">
+              </div>
+              <!-- <i class="bi bi-chevron-double-right explore-icon"></i> -->
             </button>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="logo-container">
-            <div>
+            <div class="logo-background">
               <!-- class="logo-background" -->
               <div class="logo-overlay">
                 <img src="assets/img/logo.png" alt="KFAS Logo" class="logo-main-img" />
@@ -165,7 +196,7 @@
   <section class="executive-summary-section" id="ExecutiveSummary">
     <div class="container">
       <div class="summary-header">
-        <h2 class="summary-title">Executive Summary (Kuwait)</h2>
+        <h2 class="summary-title"><span class="summary-title-1">Executive Summary</span> (Kuwait)</h2>
         <h3 class="summary-subtitle">Snapshot - Innovation Related Index</h3>
       </div>
 
@@ -261,7 +292,9 @@
           <div class="gii-content">
             <h2 class="gii-title">
               <div class="gii-text">
-                <span class="global"><span class="gii-number">3.1</span> Global</span>
+                <span class="global">
+                  <!-- <span class="gii-number">3.1</span> -->
+                  Global</span>
                 <span class="innovation-index">Innovation Index</span>
               </div>
             </h2>
@@ -291,7 +324,7 @@
         <div class="col-lg-6">
           <div class="methodology-section">
             <div class="methodology-title">
-              <p class="methodology-number">3.1.1</p>
+              <!-- <p class="methodology-number">3.1.1</p> -->
               <p class="methodology-text">Methodology</p>
             </div>
           </div>
@@ -374,7 +407,7 @@
   <section class="insights-section" id="insights-section">
     <div class="container">
       <div class="insights-header">
-        <span class="insights-number">3.1.2</span>
+        <!-- <span class="insights-number">3.1.2</span> -->
         <span class="insights-from">Insights from</span>
         <span class="insights-report">GII 2024 Report</span>
       </div>
@@ -505,7 +538,7 @@
 
                 <div class="progress-bar navy-bar" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
                   <div class="bar-content">
-                    <div >
+                    <div>
                       <!-- class="bar-icon" -->
                       <img src="assets/img/kuwaitflag.png" alt="Flag" class="flag-icon" />
                     </div>
@@ -532,7 +565,7 @@
                 <div class="progress-bar light-blue-bar" data-aos="fade-right" data-aos-duration="800"
                   data-aos-delay="400">
                   <div class="bar-content">
-                    <div >
+                    <div>
                       <!-- class="bar-icon" -->
                       <img src="assets/img/kuwaitflag.png" alt="Flag" class="flag-icon" />
                     </div>
@@ -723,7 +756,8 @@
       <div class="row mb-5">
         <div class="col-md-6">
           <h2 class="section-heading">
-            <span class="orange-text">3.2</span> Competitiveness Index (GCI)
+            <!-- <span class="orange-text">3.2</span>  -->
+            Competitiveness Index (GCI)
           </h2>
           <p class="section-para">
             The Global Competitiveness Index (GCI) by IMD (World
@@ -763,7 +797,10 @@
 
       <div class="row blue-div">
         <div class="col-md-12">
-          <h2 class="section-heading2 mb-4">3.2.1 Methodology</h2>
+          <h2 class="section-heading2 mb-4">
+            <!-- 3.2.1  -->
+            Methodology
+          </h2>
           <p class="white-para mb-4 text-center">
             The methodology used by the IMD World Competitiveness Center to
             develop the IMD World Digital Competitiveness Ranking also applies
@@ -788,8 +825,8 @@
   <section id="figure-section">
     <div class="container">
       <div class="row mb-5">
-        <div class="col-md-6">
-          <h2 class="section-title-a">3.2.2.1</h2>
+        <div class="col-lg-6 col-md-12">
+          <!-- <h2 class="section-title-a">3.2.2.1</h2> -->
           <h2 class="section-title-b">World Competitiveness</h2>
           <h2 class="section-title-c">Ranking 202 (WCR)</h2>
           <p class="section-text">
@@ -801,7 +838,7 @@
             46th place among 141 countries)
           </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-12">
           <div class="gradient-box">
             <div class="inner-box">
               <table class="table custom-table">
@@ -883,26 +920,44 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Knowledge</td>
+                      <td>
+                        <div class="gciTable">
+                          <img src="./assets/img/knowledge.png" alt="">
+                          <span>Knowledge</span>
+                        </div>
+                      </td>
                       <td>48</td>
                     </tr>
                     <tr>
-                      <td>Technology</td>
+                      <td>
+                        <div class="gciTable">
+                          <img src="./assets/img/tech.png" alt="">
+                          <span>Technology</span>
+                        </div>
+                      </td>
                       <td>44</td>
                     </tr>
                     <tr>
-                      <td>Future-Readiness</td>
+                      <td>
+                        <div class="gciTable">
+                          <img src="./assets/img/future.png" alt="">
+                          <span>Future-Readiness</span>
+                        </div>
+                      </td>
                       <td>45</td>
                     </tr>
                   </tbody>
+
                 </table>
               </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <h2 class="CompetiveText"><span class="section-title-a sec-a">3.2.2.2</span><span
-                class="section-title-b sec-a"> World
-                Digital</span></h2>
+            <h2 class="CompetiveText">
+              <!-- <span class="section-title-a sec-a">3.2.2.2</span> -->
+              <span class="section-title-b sec-a"> World
+                Digital</span>
+            </h2>
             <h3 class="section-title-c sec-a">Competitiveness Ranking</h3>
             <h6 class="section-title-c sec-a">(WDCR)</h6>
             <div>
@@ -928,7 +983,10 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="kuwait-1">
-              <h1 class="section-title-b"><span class="section-title-a">3.2.3 </span>How can we </h1>
+              <h1 class="section-title-b">
+                <!-- <span class="section-title-a">3.2.3 </span> -->
+                How can we
+              </h1>
               <h1 class="section-title-b">enhance Kuwait’s </h1>
               <h1 class="section-title-b">Ranking </h1>
             </div>
@@ -974,8 +1032,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="section-heading text-center"><span class="orange-text">3.3</span> Research and Development
-            Expenditure</h1>
+          <h1 class="section-heading text-center">
+            <!-- <span class="orange-text">3.3</span> -->
+            Research and Development
+            Expenditure
+          </h1>
           <p class="text-center ps-5 pe-5 mt-4 section-para">Gross domestic expenditures on research and development
             (R&D), expressed as a percent of GDP. They include both capital and current expenditures in the four main
             sectors: Business enterprise, Government, Higher education and Private non-profit. R&D covers basic
@@ -986,8 +1047,10 @@
       <div class="chart-transparent-bg">
         <div class="row">
           <div class="col-lg-6">
-            <h2 class="section-heading"><span class="orange-text">3.3.1</span> Insights from Kuwait’s R&D<span
-                class="heading-insightBold"> Expenditure Index</span></h2>
+            <h2 class="section-heading">
+              <!-- <span class="orange-text">3.3.1</span> -->
+              Insights from Kuwait’s R&D<span class="heading-insightBold"> Expenditure Index</span>
+            </h2>
           </div>
           <div class="col-lg-6">
             <ul class="insite-li">
@@ -1014,8 +1077,10 @@
       </div>
       <div class="row ps-5 pe-5 mt-5 mobi-text">
         <div class="col-lg-6">
-          <h2 class="section-heading"><span class="orange-text">3.3.2</span> How can we <span
-              class="heading-insightBold"> enhance Kuwait’s Ranking</span></h2>
+          <h2 class="section-heading">
+            <!-- <span class="orange-text">3.3.2</span>  -->
+            How can we <span class="heading-insightBold"> enhance Kuwait’s Ranking</span>
+          </h2>
         </div>
         <div class="col-lg-6">
           <ul class="insite-li">
@@ -1039,8 +1104,10 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="main-sci">
-            <h1 class="section-title-b text-center"><span class="section-title-a">3.4</span> Quality of Math and <span
-                class="section-title-c">Science <br> Education</span></h1>
+            <h1 class="section-title-b text-center">
+              <!-- <span class="section-title-a">3.4</span> -->
+              Quality of Math and <span class="section-title-c">Science <br> Education</span>
+            </h1>
             <p class="sci-para section-text1 text-center">Quality of Math and Science Education: Evaluates the
               effectiveness of education systems in delivering strong foundations in mathematics and science. Nations
               with
@@ -1057,7 +1124,9 @@
                 <h2 class="accordion-header" id="headOne">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapOne"
                     aria-expanded="false" aria-controls="collapOne">
-                    <span class="accordion-title"><span class="Ccolor">3.1.3</span> How can we enhance Kuwait’s
+                    <span class="accordion-title">
+                      <!-- <span class="Ccolor">3.1.3</span> -->
+                      How can we enhance Kuwait’s
                       Ranking</span>
                     <span class="accordion-icon"></span>
                   </button>
@@ -1100,7 +1169,9 @@
                 <h2 class="accordion-header" id="headThree">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapThree" aria-expanded="false" aria-controls="collapThree">
-                    <span class="accordion-title"><span class="Ccolor">3.6.2</span> How can we enhance Kuwait’s
+                    <span class="accordion-title">
+                      <!-- <span class="Ccolor">3.6.2</span>  -->
+                      How can we enhance Kuwait’s
                       Ranking</span>
                     <span class="accordion-icon"></span>
                   </button>
@@ -1125,8 +1196,10 @@
       <div class="row">
         <div class="glassMorphCard">
           <div class="col-lg-12">
-            <h1 class=" text-center"><span class="section-title-a">3.5</span> <span
-                class="section-title-b">Patent</span> <span class="section-title-c">Applications</span></h1>
+            <h1 class=" text-center">
+              <!-- <span class="section-title-a">3.5</span> -->
+              <span class="section-title-b">Patent</span> <span class="section-title-c">Applications</span>
+            </h1>
             <p class="sci-para section-text1 text-center">Measured by the number of Intellectual Property (IP) filings
               made
               worldwide by applicants from each country of 196 countries. The latest available IP filling sheet
@@ -1158,7 +1231,9 @@
                     <h2 class="accordion-header" id="SecTwo">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collaTwo" aria-expanded="false" aria-controls="collaTwo">
-                        <span class="accordion-title"><span class="Ccolor">3.5.2</span> How can we enhance Kuwait’s
+                        <span class="accordion-title">
+                          <!-- <span class="Ccolor">3.5.2</span> -->
+                          How can we enhance Kuwait’s
                           Ranking</span>
                         <span class="accordion-icon"></span>
                       </button>
@@ -1181,9 +1256,11 @@
             </div>
           </div>
           <div class="col-lg-12">
-            <h1 class=" text-center mt-5"><span class="section-title-a">3.6</span> <span
-                class="section-title-b">High-Quality
-                Scientific Articles</span></h1>
+            <h1 class=" text-center mt-5">
+              <!-- <span class="section-title-a">3.6</span> -->
+              <span class="section-title-b">High-Quality
+                Scientific Articles</span>
+            </h1>
             <p class="sci-para section-text1">Measured by the number of Intellectual Property (IP) filings made
               worldwide by applicants from each country of 196 countries. The latest available IP filling sheet
               available was in 2023 by WIPO. . </p>
@@ -1214,7 +1291,9 @@
                     <h2 class="accordion-header" id="heaTwo">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collpTwo" aria-expanded="false" aria-controls="collpTwo">
-                        <span class="accordion-title"><span class="Ccolor">3.5.2</span> How can we enhance Kuwait’s
+                        <span class="accordion-title">
+                          <!-- <span class="Ccolor">3.5.2</span> -->
+                          How can we enhance Kuwait’s
                           Ranking</span>
                         <span class="accordion-icon"></span>
                       </button>
