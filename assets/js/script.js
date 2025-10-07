@@ -8,9 +8,125 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Initialize Owl Carousel
-  const $carousel = $(".innovation-carousel");
+  // const $carousel = $(".innovation-carousel");
 
-  $carousel.owlCarousel({
+  // $carousel.owlCarousel({
+  //   center: false,
+  //   loop: true,
+  //   margin: 20,
+  //   nav: false,
+  //   dots: false,
+  //   autoplay: false,
+  //   startPosition: 0,
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //     },
+  //     768: {
+  //       items: 2,
+  //     },
+  //     1024: {
+  //       items: 2,
+  //     },
+  //     1440: {
+  //       items: 3,
+  //     },
+  //     2560: {
+  //       items: 3,
+  //     },
+  //   },
+  // });
+
+  // // Highlight leftmost visible item
+  // function highlightFirstVisible() {
+  //   $carousel.find(".innovation-card").removeClass("highlight-left");
+  //   const firstVisible = $carousel
+  //     .find(".owl-item.active")
+  //     .first()
+  //     .find(".innovation-card");
+  //   firstVisible.addClass("highlight-left");
+  // }
+
+  // $carousel.on(
+  //   "initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel",
+  //   function () {
+  //     setTimeout(highlightFirstVisible, 50);
+  //   }
+  // );
+
+  // highlightFirstVisible();
+
+  // // Custom Nav Button Handlers
+  // $("#custom-prev").click(function () {
+  //   $carousel.trigger("prev.owl.carousel");
+  // });
+
+  // $("#custom-next").click(function () {
+  //   $carousel.trigger("next.owl.carousel");
+  // });
+
+
+  // const $carousels = $(".innovation-carousel-1");
+
+  // $carousels.owlCarousel({
+  //   center: false,
+  //   loop: true,
+  //   margin: 20,
+  //   nav: false,
+  //   dots: false,
+  //   autoplay: false,
+  //   startPosition: 0,
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //     },
+  //     768: {
+  //       items: 2,
+  //     },
+  //     1024: {
+  //       items: 2,
+  //     },
+  //     1440: {
+  //       items: 3,
+  //     },
+  //     2560: {
+  //       items: 3,
+  //     },
+  //   },
+  // });
+
+  // // Highlight leftmost visible item
+  // function highlightFirstVisible() {
+  //   $carousels.find(".innovation-card").removeClass("highlight-left");
+  //   const firstVisible = $carousel
+  //     .find(".owl-item.active")
+  //     .first()
+  //     .find(".innovation-card");
+  //   firstVisible.addClass("highlight-left");
+  // }
+
+  // $carousels.on(
+  //   "initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel",
+  //   function () {
+  //     setTimeout(highlightFirstVisible, 50);
+  //   }
+  // );
+
+  // highlightFirstVisible();
+
+  // // Custom Nav Button Handlers
+  // $("#custom-prev").click(function () {
+  //   $carousels.trigger("prev.owl.carousel");
+  // });
+
+  // $("#custom-next").click(function () {
+  //   $carousels.trigger("next.owl.carousel");
+  // });
+
+  $(document).ready(function () {
+  // ===== Carousel 1 =====
+  const $carousel1 = $(".innovation-carousel");
+  $carousel1.owlCarousel({
     center: false,
     loop: true,
     margin: 20,
@@ -19,45 +135,74 @@ document.addEventListener("DOMContentLoaded", function () {
     autoplay: false,
     startPosition: 0,
     responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 2,
-      },
-      1024: {
-        items: 4,
-      },
+      0: { items: 1 },
+      768: { items: 1 },
+      1024: { items: 1 },
+      1440: { items: 2 },
+      2560: { items: 3 },
     },
   });
 
-  // Highlight leftmost visible item
-  function highlightFirstVisible() {
-    $carousel.find(".innovation-card").removeClass("highlight-left");
-    const firstVisible = $carousel
+  function highlightFirstVisible1() {
+    $carousel1.find(".innovation-card").removeClass("highlight-left");
+    const firstVisible = $carousel1
       .find(".owl-item.active")
       .first()
       .find(".innovation-card");
     firstVisible.addClass("highlight-left");
   }
 
-  $carousel.on(
+  $carousel1.on(
     "initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel",
     function () {
-      setTimeout(highlightFirstVisible, 50);
+      setTimeout(highlightFirstVisible1, 50);
     }
   );
+  highlightFirstVisible1();
 
-  highlightFirstVisible();
+  $("#custom-prev-1").click(() => $carousel1.trigger("prev.owl.carousel"));
+  $("#custom-next-1").click(() => $carousel1.trigger("next.owl.carousel"));
 
-  // Custom Nav Button Handlers
-  $("#custom-prev").click(function () {
-    $carousel.trigger("prev.owl.carousel");
+
+  // ===== Carousel 2 =====
+  const $carousel2 = $(".innovation-carousel-1");
+  $carousel2.owlCarousel({
+    center: false,
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    autoplay: false,
+    startPosition: 0,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 1 },
+      1024: { items: 1 },
+      1440: { items: 2 },
+      2560: { items: 3 },
+    },
   });
 
-  $("#custom-next").click(function () {
-    $carousel.trigger("next.owl.carousel");
-  });
+  function highlightFirstVisible2() {
+    $carousel2.find(".innovation-card").removeClass("highlight-left");
+    const firstVisible = $carousel2
+      .find(".owl-item.active")
+      .first()
+      .find(".innovation-card");
+    firstVisible.addClass("highlight-left");
+  }
+
+  $carousel2.on(
+    "initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel",
+    function () {
+      setTimeout(highlightFirstVisible2, 50);
+    }
+  );
+  highlightFirstVisible2();
+
+  $("#custom-prev-2").click(() => $carousel2.trigger("prev.owl.carousel"));
+  $("#custom-next-2").click(() => $carousel2.trigger("next.owl.carousel"));
+});
 
 
 
@@ -239,12 +384,10 @@ document.addEventListener("DOMContentLoaded", function () {
   //     setTimeout(() => drawFlags(chart), 10)
   //   );
   // }
-  const ctx = document.getElementById("gccCompetitivenessChart");
+const ctx = document.getElementById("gccCompetitivenessChart");
 if (ctx) {
-  // ✅ Order countries by best → worst (7 → 37)
   const countries = ["UAE", "Bahrain", "Saudi Arabia", "Qatar", "Kuwait"];
 
-  // Rankings mapped to countries
   const rankings = {
     UAE: 7,
     Bahrain: 11,
@@ -253,7 +396,6 @@ if (ctx) {
     Kuwait: 37,
   };
 
-  // Map country to PNG flag image paths
   const flagUrls = {
     UAE: "assets/img/Emirates.png",
     Qatar: "assets/img/Qatar.png",
@@ -262,7 +404,6 @@ if (ctx) {
     Kuwait: "assets/img/kuwaitflag.png",
   };
 
-  // Preload images
   const flagImages = {};
   let loadedImages = 0;
 
@@ -278,22 +419,17 @@ if (ctx) {
     flagImages[country] = img;
   });
 
-  const gradient = ctx.getContext("2d").createLinearGradient(0, 0, 0, ctx.height);
-  gradient.addColorStop(0, "rgba(74,144,226,0.4)"); // top light blue
-  gradient.addColorStop(1, "rgba(74,144,226,0.05)"); // bottom very light
-
-  // Chart data
   const chartData = {
     labels: countries,
     datasets: [
       {
         label: "World Competitiveness Ranking",
-        data: countries.map((c) => rankings[c]), // ✅ correct ranking order
-        borderColor: "#4A90E2",
-        backgroundColor: "rgba(74, 144, 226, 0.1)",
-        borderWidth: 3,
-        fill: "origin",
-        tension: 0.4,
+        data: countries.map((c) => rankings[c]),
+        borderColor: "transparent",
+        backgroundColor: "transparent",
+        borderWidth: 0,
+        fill: false,
+        tension: 0,
         pointRadius: 14,
         pointHoverRadius: 18,
         pointBackgroundColor: "transparent",
@@ -311,18 +447,20 @@ if (ctx) {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: "rgba(0, 0, 0, 0.8)",
+          backgroundColor: "rgba(0, 0, 0, 0.85)",
           titleColor: "#fff",
           bodyColor: "#fff",
           borderColor: "#4A90E2",
           borderWidth: 1,
           displayColors: false,
+          padding: 10,
           callbacks: {
             title: (context) => context[0].label,
-            label: (context) =>
-              `Ranking: ${context.parsed.y}${getOrdinalSuffix(
-                context.parsed.y
-              )}`,
+            label: (context) => {
+              const country = context.label;
+              const ranking = context.parsed.y;
+              return `${country}: ${ranking}${getOrdinalSuffix(ranking)} place`;
+            },
           },
         },
       },
@@ -340,17 +478,18 @@ if (ctx) {
           max: 40,
           reverse: true,
           ticks: { display: false },
-          grid: { color: "rgba(0,0,0,0.05)", drawBorder: false },
+          grid: { display: false },
+          border: { display: false },
         },
         x: {
           ticks: { display: false },
           grid: { display: false },
+          border: { display: false },
         },
       },
     },
   };
 
-  // Helper: ordinal suffix
   function getOrdinalSuffix(num) {
     const j = num % 10,
       k = num % 100;
@@ -360,57 +499,58 @@ if (ctx) {
     return "th";
   }
 
-  // Draw PNG flags
-// Draw PNG flags
-function drawFlags(chart) {
-  const ctx = chart.ctx;
-  chart.data.datasets.forEach((dataset, datasetIndex) => {
-    const meta = chart.getDatasetMeta(datasetIndex);
-    meta.data.forEach((point, index) => {
-      const country = chart.data.labels[index];
-      const flagImage = flagImages[country];
+  // 🏁 Draw flags, rank, and country names
+  function drawFlags(chart) {
+    const ctx = chart.ctx;
+    chart.data.datasets.forEach((dataset, datasetIndex) => {
+      const meta = chart.getDatasetMeta(datasetIndex);
+      meta.data.forEach((point, index) => {
+        const country = chart.data.labels[index];
+        const flagImage = flagImages[country];
 
-      if (flagImage && point) {
-        const radius = 14; // ✅ smaller flag size
-        const x = point.x;
-        const y = point.y;
+        if (flagImage && point) {
+          const radius = 14;
+          const x = point.x;
+          const y = point.y;
 
-        // White circle background
-        ctx.beginPath();
-        ctx.arc(x, y, radius + 3, 0, 2 * Math.PI); // ✅ smaller border
-        ctx.fillStyle = "white";
-        ctx.fill();
-        ctx.strokeStyle = "#4A90E2";
-        ctx.lineWidth = 2;
-        ctx.stroke();
+          // Circle background
+          ctx.beginPath();
+          ctx.arc(x, y, radius + 3, 0, 2 * Math.PI);
+          ctx.fillStyle = "white";
+          ctx.fill();
+          ctx.strokeStyle = "#4A90E2";
+          ctx.lineWidth = 2;
+          ctx.stroke();
 
-        // Clip the flag into a circle
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(x, y, radius, 0, 2 * Math.PI);
-        ctx.closePath();
-        ctx.clip();
+          // Flag inside circle
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(x, y, radius, 0, 2 * Math.PI);
+          ctx.closePath();
+          ctx.clip();
+          ctx.drawImage(flagImage, x - radius, y - radius, radius * 2, radius * 2);
+          ctx.restore();
 
-        ctx.drawImage(flagImage, x - radius, y - radius, radius * 2, radius * 2);
+          // Rank above
+          const ranking = dataset.data[index];
+          ctx.fillStyle = "#333";
+          ctx.font = "bold 13px Arial, sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText(ranking + getOrdinalSuffix(ranking), x, y - radius - 10);
 
-        ctx.restore();
-
-        // Draw ranking above
-        ctx.fillStyle = "#333";
-        ctx.font = "bold 13px Arial, sans-serif"; // ✅ smaller text
-        ctx.textAlign = "center";
-        const ranking = dataset.data[index];
-        ctx.fillText(ranking + getOrdinalSuffix(ranking), x, y - radius - 10);
-      }
+          // ✅ Country name beside flag (right side)
+          ctx.fillStyle = "#333";
+          ctx.font = "12px Arial, sans-serif";
+          ctx.textAlign = "left";
+          ctx.fillText(country, x + radius + 8, y + 4);
+        }
+      });
     });
-  });
-}
+  }
 
-
-  // Create chart
   const chart = new Chart(ctx, config);
 
-  // Redraw on hover
+  // Redraw flags when hovering (tooltip refresh)
   ctx.canvas.addEventListener("mousemove", () =>
     setTimeout(() => drawFlags(chart), 10)
   );
@@ -418,6 +558,7 @@ function drawFlags(chart) {
     setTimeout(() => drawFlags(chart), 10)
   );
 }
+
 
 
 
