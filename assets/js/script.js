@@ -603,30 +603,67 @@ if (chartCtx) {
     plugins: [ChartDataLabels],
   });
 
-  const menuToggle = document.getElementById("menuToggle");
-  const navbarMenu = document.getElementById("navbarMenu");
-  const header = document.querySelector(".header");
-
-  menuToggle.addEventListener("click", function () {
-    navbarMenu.classList.toggle("active");
-    header.classList.toggle("active");
-  });
-
-  // Optional: close menu when link is clicked (mobile)
-  document.querySelectorAll(".navbar-links a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navbarMenu.classList.remove("active");
-      header.classList.remove("active");
-    });
-  });
-}
-
+const menuToggle = document.getElementById("menuToggle");
+const navbarMenu = document.getElementById("navbarMenu");
 const header = document.querySelector(".header");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
+// ✅ Mobile menu toggle
+menuToggle.addEventListener("click", function () {
+  navbarMenu.classList.toggle("active");
+  header.classList.toggle("active");
 });
+
+// ✅ Close menu when clicking a link (for mobile)
+document.querySelectorAll(".navbar-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navbarMenu.classList.remove("active");
+    header.classList.remove("active");
+  });
+});
+
+// ✅ Dropdown menu toggle (for nav5)
+document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+  toggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    const parent = toggle.closest(".dropdown");
+    parent.classList.toggle("open");
+
+    // Optional: close other dropdowns
+    document.querySelectorAll(".dropdown").forEach((d) => {
+      if (d !== parent) d.classList.remove("open");
+    });
+  });
+});
+
+
+
+
+  // const menuToggle = document.getElementById("menuToggle");
+  // const navbarMenu = document.getElementById("navbarMenu");
+  // const header = document.querySelector(".header");
+
+  // menuToggle.addEventListener("click", function () {
+  //   navbarMenu.classList.toggle("active");
+  //   header.classList.toggle("active");
+  // });
+
+  // // Optional: close menu when link is clicked (mobile)
+  // document.querySelectorAll(".navbar-links a").forEach((link) => {
+  //   link.addEventListener("click", () => {
+  //     navbarMenu.classList.remove("active");
+  //     header.classList.remove("active");
+  //   });
+  // });
+}
+
+// const header = document.querySelector(".header");
+
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > 50) {
+//     header.classList.add("scrolled");
+//   } else {
+//     header.classList.remove("scrolled");
+//   }
+// });
+
+
