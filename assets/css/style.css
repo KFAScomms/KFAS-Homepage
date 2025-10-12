@@ -58,7 +58,8 @@ body {
 
 /* Global Innovation Index Section */
 .gii-section {
-    background: linear-gradient(to top right, #1E2D44 0%, #213149 100%);
+    background-color: #428ecb;
+    /* background: linear-gradient(to top right, #1E2D44 0%, #213149 100%); */
     padding: 100px 0;
     color: white;
 }
@@ -126,8 +127,8 @@ body {
     font-size: 20px;
     color: #fff;
     line-height: 34px;
+    text-transform: math-auto;
     letter-spacing: 0%;
-    /* text-transform: capitalize; */
     margin-bottom: 40px;
 }
 
@@ -413,7 +414,7 @@ body {
     padding: 30px 40px;
     border: 1px solid white;
     border-radius: 16px;
-    background-color: #1E2D44;
+    background-color: #e6eff932;
     margin-top: 40px;
 }
 
@@ -461,7 +462,7 @@ body {
 
 /* Innovation Input Sub-Index Section */
 .innovation-input-section {
-    background: #1E2D44;
+    background: #428ecb;
     padding: 0px 0 80px 0;
     color: white;
 }
@@ -501,12 +502,13 @@ body {
 .innovation-card:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
     backdrop-filter: blur(14.253610610961914px)
 }
 
 .innovation-card.highlight-left {
-    background: linear-gradient(124.67deg, #BCDEFB -30.11%, #1E2D44 127.06%);
+    /* background: linear-gradient(124.67deg, #BCDEFB -30.11%, #1E2D44 127.06%); */
+    background-color: #81bfe8;
     backdrop-filter: none;
     border: none;
 }
@@ -590,7 +592,8 @@ body {
 
 /* Insights From GII 2024 Report Section */
 .insights-section {
-    background: linear-gradient(135deg, #ffffff 0%, #f5f6f7 100%);
+    background-color: #428ecb;
+    /* background: linear-gradient(135deg, #ffffff 0%, #f5f6f7 100%); */
     padding: 80px 0;
     color: #333;
 }
@@ -619,7 +622,7 @@ body {
     font-size: 48px;
     line-height: 100%;
     letter-spacing: 0%;
-    color: #1E2D44;
+    color: #fff;
     margin: 0;
     margin-right: 10px;
 }
@@ -631,7 +634,7 @@ body {
     font-size: 56px;
     line-height: 100%;
     letter-spacing: 0%;
-    color: #1E2D44;
+    color: #fff;
     text-transform: capitalize;
     margin: 0;
 }
@@ -639,18 +642,20 @@ body {
 .insights-intro {
     margin-bottom: 50px;
     text-align: center;
+    color: #fff;
 }
 
 .insights-intro p {
     font-family: 'Dubai', sans-serif;
     font-size: 20px;
     line-height: 1.6;
-    color: #555;
+    color: #fff;
     margin: 0;
 }
 
 .data-table-container {
-    background-image: url('../img/table-bg.png');
+    /* background-image: url('../img/table-bg.png'); */
+    background-color: #e6eff9;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1053,7 +1058,8 @@ h6 {
 /* Main Cover Section */
 .main-cover {
     /* background: linear-gradient(135deg, #4C90CC 0%, #f2702468 100%); */
-    background: linear-gradient(135deg, #4c90cc2b 0%, #f2702445 100%);
+    /* background: linear-gradient(135deg, #4c90cc2b 0%, #f2702445 100%); */
+    background-color: #f6932272;
     border-radius: 20px;
     margin: 20px;
     position: relative;
@@ -1103,7 +1109,7 @@ h6 {
     line-height: 30px;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: math-auto;
     color: #5C5C5C;
     margin-top: 30px;
 }
@@ -1155,6 +1161,8 @@ h6 {
     font-size: 20px;
     color: #1E2D44;
     font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .text2 {
@@ -1722,7 +1730,8 @@ h6 {
 /* Executive Summary Section */
 .executive-summary-section {
     padding: 80px 0;
-    background: linear-gradient(to top, #f0f0f9 0%, white 100%);
+    /* background: linear-gradient(to top, #f0f0f9 0%, white 100%); */
+    background-color: #81bfe8;
 }
 
 .summary-header {
@@ -1949,6 +1958,7 @@ h6 {
     font-size: 18px;
     font-weight: 400;
     color: #374151;
+    text-transform: math-auto;
     line-height: 1.6;
     margin: 0;
 }
@@ -2066,7 +2076,7 @@ h6 {
 }
 
 #methodology {
-    background-color: #1E2D44;
+    background-color: #428ecb;
     padding-top: 80px;
     padding-bottom: 80px;
 }
@@ -2161,6 +2171,7 @@ h6 {
 }
 
 #figure-section {
+    background-color: #428ecb;
     /* background-image: url('https://dummyimage.com/1000x4000/f7f7f7/f7f7f7'); */
     padding: 80px 0;
 
@@ -2192,6 +2203,7 @@ h6 {
     text-align: center;
     line-height: 100%;
     letter-spacing: 0%;
+    color: #fff;
 }
 
 .section-title-c {
@@ -2202,6 +2214,7 @@ h6 {
     text-align: center;
     line-height: 100%;
     letter-spacing: 0%;
+    color: #fff;
 }
 
 .section-text {
@@ -2211,7 +2224,7 @@ h6 {
     font-size: 20px;
     line-height: 160%;
     letter-spacing: 0%;
-    color: #5C5C5C;
+    color: #fff;
     width: 100%;
     max-width: 850px;
     margin: auto;
@@ -2221,7 +2234,8 @@ h6 {
 
 
 .gradient-box {
-    background: linear-gradient(to bottom right, #ffffff00, #fdf4ef00);
+   background: linear-gradient(to bottom right, #ffffff77, #FDF4EF);
+    /* background: linear-gradient(to bottom right, #ffffff00, #fdf4ef00); */
     border-radius: 10px;
     padding: 30px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
@@ -3185,7 +3199,7 @@ h6 {
     font-weight: 500;
     font-size: 26px;
     line-height: 109%;
-    color: #1E2D44;
+    color: #fff;
     flex-grow: 1;
 }
 
@@ -3194,7 +3208,7 @@ h6 {
     font-weight: 600;
     font-size: 26px;
     line-height: 109%;
-    color: #1E2D44;
+    color: #fff;
 }
 
 .accordion-icon {
@@ -3227,12 +3241,12 @@ h6 {
     font-weight: 400;
     font-size: 17px;
     line-height: 150%;
-    color: #5C5C5C;
+    color: #fff;
     margin-bottom: 0;
 }
 
 .gradient-box-chart {
-    background-image: url("../img/bgGradient.png");
+    /* background-image: url("../img/bgGradient.png"); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -3247,7 +3261,8 @@ h6 {
 }
 
 .World-Digital-section {
-    padding-top: 120px;
+    background-color: #428ecb;
+    /* padding-top: 120px; */
     padding-bottom: 120px;
     position: relative;
 }
@@ -3300,6 +3315,7 @@ h6 {
 
 .sec-a {
     font-size: 45px;
+    color: #fff;
 }
 
 .section-text1 {
@@ -3310,11 +3326,12 @@ h6 {
     leading-trim: NONE;
     line-height: 160%;
     letter-spacing: 0%;
-    color: #1E2D44;
+    color: #fff;
 }
 
 .bg-Orange {
-    background-image: url('../img//orangeBg.png');
+    /* background-image: url('../img//orangeBg.png'); */
+    background-color: #e6eff9;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3360,7 +3377,7 @@ h6 {
 }
 
 .developBg {
-    background-color: #1E2D44;
+    background-color: #428ecb;
     /* background-image: url('../img/blueBg.png'); */
     background-size: cover;
     background-repeat: no-repeat;
@@ -3401,9 +3418,14 @@ h6 {
 }
 
 .section-science {
+    background-color: #428ecb;
     padding-top: 150px;
     padding-bottom: 150px;
     position: relative;
+}
+
+.conclusionBox{
+    background-color: #ee6123;
 }
 
 .section-science .container {
@@ -3447,6 +3469,7 @@ h6 {
     font-weight: 500;
     text-align: center;
     margin: 0px;
+    color: #fff;
 }
 
 .insitText1 {
@@ -3493,7 +3516,7 @@ h6 {
 }
 
 .conclusionBox {
-    margin-top: 130px;
+    padding-top: 50px;
 }
 
 .left-1,
@@ -3571,10 +3594,61 @@ h6 {
     text-decoration: none;
 }
 
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+}
 
+/* Dropdown toggle button */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+      font-weight: 600;
+    font-family: 'Dubai';
+    font-size: 16px;
+}
 
+.dropdown .arrow {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+
+.dropdown-menu li a{
+    font-weight: 500;
+}
+.dropdown-menu li{
+    padding: 5px 0px;
+}
+
+/* Dropdown menu styling */
+/* Dropdown hidden by default */
+.navbar-links .dropdown .dropdown-menu {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  display: none; /* no !important needed now */
+  z-index: 99;
+  padding: 10px 10px;
+  width: 100%;
+  flex-direction: column; /* override flex from parent ul */
+}
+
+/* Show when open */
+.navbar-links .dropdown.open .dropdown-menu {
+  display: block;
+}
 
 /* Navbar hidden by default */
+
 .navbar-links {
     display: block;
     /* background: #1F2E46; */
@@ -3626,19 +3700,19 @@ h6 {
 }
 
 .nav2 {
-    background-color: #E3F3FF;
-    border-bottom: 3px solid #5995C2;
+    background-color: #428ecb;
+    border-bottom: 3px solid #81bfe8;
 
 }
 
 .nav3 {
-    background-color: #FFECD1;
-    border-bottom: 3px solid #FBC373;
+    background-color: #81bfe8;
+    border-bottom: 3px solid #428ecb;
 }
 
 .nav4 {
-    background-color: #DDE3ED;
-    border-bottom: 3px solid #1E2D44;
+    background-color: #f69222;
+    border-bottom: 3px solid #fed282;
 }
 
 .nav5 {
@@ -3647,8 +3721,8 @@ h6 {
 }
 
 .nav6 {
-    background-color: #FFDBDCEE;
-    border-bottom: 3px solid #D25559;
+    background-color: #ee6123;
+    border-bottom: 3px solid #fed282;
 }
 
 /* Desktop hover effect */
@@ -3759,3 +3833,4 @@ h6 {
     font-family: 'Dubai';
     font-size: 16px;
 }
+
