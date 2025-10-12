@@ -50,7 +50,7 @@
           <!-- Navbar -->
           <nav class="navbar-links" id="navbarMenu">
             <ul>
-              <li class="nav2"><a href="#bottom-frame">
+              <li class="nav4"><a href="#bottom-frame">
 
                   Intorduction
                 </a></li>
@@ -58,10 +58,20 @@
 
                   Executive Summary
                 </a></li>
-              <li class="nav4"><a href="#insights-section">
-
+              <li class="nav2 dropdown">
+                <button class="dropdown-toggle">
                   Innovation Indicators
-                </a></li>
+                  <!-- <span class="arrow">▾</span> -->
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#GII">Global Innovation Index</a></li>
+                  <li><a href="#GCI">Global Competitiveness Index</a></li>
+                  <li><a href="#RDE">Research Development Expendtiture</a></li>
+                  <li><a href="#QMSE">Quality Of Math & Science Education</a></li>
+                  <li><a href="#PA">Patent Applications</a></li>
+                  <li><a href="#HSA">High Quality Scientific Articles</a></li>
+                </ul>
+              </li>
               <!-- <li class="nav5"><a href="#methodology ">
 
                   Competitiveness Index
@@ -87,7 +97,7 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container text-center">
-        <div class="mainImg"><img src="./assets/img/logo.png" alt=""></div>
+        <div class="mainImg"><img src="./assets/img/Logo-1.png" alt=""></div>
         <h1 class="hero-title">
           <span class="title-part-1">Innovation Indicators:</span>
           <br />
@@ -115,10 +125,10 @@
           <div class="col-lg-12">
             <div class="maiGraph">
               <div class="leftGraph">
-                <div class="boxBorder">
+                <div class="boxBorder" >
                   <div><img src="./assets/img/Group1577707261.png" alt=""></div>
                   <div>
-                    <p class="text1">R&D expenditure</p>
+                    <a class="text1" href="#RNDE" >R&D expenditure</a>
                     <p class="text2">Public and private</p>
                   </div>
                 </div>
@@ -156,14 +166,14 @@
                 <div class="boxBorder">
                   <div><img src="./assets/img/Group1577707257.png" alt=""></div>
                   <div>
-                    <p class="text1">Patents and trademarks</p>
+                    <a class="text1" href="#PA">Patents and trademarks</a>
                     <p class="text2">Representing new ideas and inventions</p>
                   </div>
                 </div>
                 <div class="boxBorder">
                   <div><img src="./assets/img/Group1577707256.png" alt=""></div>
                   <div>
-                    <p class="text1">Scientific publications</p>
+                    <a class="text1" href="#HSA">Scientific publications</a>
                     <p class="text2">indicating research output</p>
                   </div>
                 </div>
@@ -326,8 +336,8 @@
         <div class="row">
 
           <div class="col-lg-9 col-md-9 col-sm-12 ">
-            <div class="gii-content">
-              <h2 class="gii-title">
+            <div class="gii-content" id="GII">
+              <h2 class="gii-title" >
                 <div class="gii-text">
                   <span class="global">Global</span>
                   <span class="innovation-index">Innovation Index</span>
@@ -553,7 +563,7 @@
           <div class="table-images">
             <!-- <img src="assets/img/header2.jpg" alt="Table Header" class="table-image" data-aos="fade-down"
             data-aos-duration="600" data-aos-delay="0" /> -->
-            <section class="colored-area">
+            <section class="colored-area" id="GCI">
               <div class="container-fluid ms-0 me-0">
                 <div class="progress-bars">
                   <div class="progress-bar orange-bar" data-aos="fade-right" data-aos-duration="800"
@@ -1346,11 +1356,11 @@
     </div>
   </section>
 
-  <section class="developBg" id="developBg">
+  <section class="developBg" id="RDE">
     <div class="container">
       <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-12">
-          <h1 class="section-heading">
+          <h1 class="section-heading" id="RNDE">
             <!-- <span class="orange-text">3.3</span> -->
             Research and Development
             Expenditure
@@ -1607,7 +1617,7 @@
     <img class="left-4" src="./assets//img/BubblesideOrng.png" alt="">
     <img class="left-5" src="./assets//img/BubblesideBlue.png" alt="">
     <div class="container">
-      <div class="row">
+      <div class="row" id="QMSE">
         <div class="col-lg-12">
           <div class="main-sci">
             <h1 class="section-title-b text-center">
@@ -1645,14 +1655,18 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-12 col-md-12">
           <div class="accordion" id="kuwaitRankingAccordion">
-            <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+              data-aos-delay="100">
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  <span class="accordion-title text-center"><span><img src="./assets/img/researches.png" class="accordianImg" alt=""></span>Increase investment in R&amp;D</span>
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="false" aria-controls="collapseOne">
+                  <span class="accordion-title text-center"><span><img src="./assets/img/researches.png"
+                        class="accordianImg" alt=""></span>Increase investment in R&amp;D</span>
                   <span class="accordion-icon"></span>
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapsed" aria-labelledby="headingOne" data-bs-parent="#kuwaitRankingAccordion">
+              <div id="collapseOne" class="accordion-collapse collapsed" aria-labelledby="headingOne"
+                data-bs-parent="#kuwaitRankingAccordion">
                 <div class="accordion-body">
                   <p class="text-center">
                     Increase investment in R&amp;D and strengthen STEM education to build a robust innovation talent
@@ -1664,14 +1678,18 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+            data-aos-delay="100">
             <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <span class="accordion-title"><span><img src="./assets/img/financial.png" class="accordianImg" alt=""></span>The financial sector</span>
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <span class="accordion-title"><span><img src="./assets/img/financial.png" class="accordianImg"
+                      alt=""></span>The financial sector</span>
                 <span class="accordion-icon"></span>
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#kuwaitRankingAccordion">
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#kuwaitRankingAccordion">
               <div class="accordion-body">
                 <p>
                   The financial sector can accelerate innovation by expanding access to venture capital, supporting
@@ -1683,14 +1701,18 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+            data-aos-delay="300">
             <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <span class="accordion-title"><span><img src="./assets/img/digital.png" class="accordianImg" alt=""></span>Enhance digital infrastructure</span>
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <span class="accordion-title"><span><img src="./assets/img/digital.png" class="accordianImg"
+                      alt=""></span>Enhance digital infrastructure</span>
                 <span class="accordion-icon"></span>
               </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#kuwaitRankingAccordion">
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#kuwaitRankingAccordion">
               <div class="accordion-body">
                 <p>
                   Enhance digital infrastructure and establish innovation hubs to foster cross-sector collaboration.
@@ -1702,14 +1724,18 @@
 
         </div>
         <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+            data-aos-delay="400">
             <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                <span class="accordion-title"><span><img src="./assets/img/boost.png" class="accordianImg" alt=""></span>Boost patent activity</span>
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <span class="accordion-title"><span><img src="./assets/img/boost.png" class="accordianImg"
+                      alt=""></span>Boost patent activity</span>
                 <span class="accordion-icon"></span>
               </button>
             </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#kuwaitRankingAccordion">
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+              data-bs-parent="#kuwaitRankingAccordion">
               <div class="accordion-body">
                 <p>
                   Boost patent activity and promote research commercialization to increase knowledge outputs and
@@ -1722,14 +1748,18 @@
 
         </div>
         <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+            data-aos-delay="500">
             <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                <span class="accordion-title"><span><img src="./assets/img/support.png" class="accordianImg" alt=""></span>Support SMEs and startups</span>
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <span class="accordion-title"><span><img src="./assets/img/support.png" class="accordianImg"
+                      alt=""></span>Support SMEs and startups</span>
                 <span class="accordion-icon"></span>
               </button>
             </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#kuwaitRankingAccordion">
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+              data-bs-parent="#kuwaitRankingAccordion">
               <div class="accordion-body">
                 <p>
                   Support SMEs and startups by improving access to finance and encouraging market-driven innovation.
@@ -1743,7 +1773,7 @@
       <div class="row">
         <div class="mt-5 pt-5">
           <!-- class="glassMorphCard" -->
-          <div class="col-lg-12">
+          <div class="col-lg-12" id="PA">
             <h1 class=" text-center">
               <!-- <span class="section-title-a">3.5</span> -->
               <span class="section-title-b"><span class="section-title-a"><img src="./assets/img/image.png" class="file"
@@ -1762,124 +1792,150 @@
                 2018.</p> -->
             </div>
 
-      <div class="row mt-5">
-        <div class="col-lg-12">
-          <div class="insights-header">
-            <!-- <span class="insights-number">3.1.2</span> -->
-            <span class="insights-from">How can we enhance Kuwait’s Ranking</span>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="insights-intro">
-            <p>
-              After analysing the factors influencing the GCI ranking and considering Kuwait's innovation ecosystem with
-              its various components and contributors, the GCI ranking can be enhanced by the involvement of the
-              following sectors:
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row d-flex justify-content-center">
-        <div class="col-lg-12 col-md-12">
-          <div class="accordion" id="kuwaitRankingAccordion">
-            <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  <span class="accordion-title text-center"><span><img src="./assets/img/researches.png" class="accordianImg" alt=""></span>Increase investment in R&amp;D</span>
-                  <span class="accordion-icon"></span>
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapsed" aria-labelledby="headingOne" data-bs-parent="#kuwaitRankingAccordion">
-                <div class="accordion-body">
-                  <p class="text-center">
-                    Increase investment in R&amp;D and strengthen STEM education to build a robust innovation talent
-                    pipeline.
+            <div class="row mt-5">
+              <div class="col-lg-12">
+                <div class="insights-header">
+                  <!-- <span class="insights-number">3.1.2</span> -->
+                  <span class="insights-from">How can we enhance Kuwait’s Ranking</span>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="insights-intro">
+                  <p>
+                    After analysing the factors influencing the GCI ranking and considering Kuwait's innovation
+                    ecosystem with
+                    its various components and contributors, the GCI ranking can be enhanced by the involvement of the
+                    following sectors:
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <span class="accordion-title"><span><img src="./assets/img/financial.png" class="accordianImg" alt=""></span>The financial sector</span>
-                <span class="accordion-icon"></span>
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#kuwaitRankingAccordion">
-              <div class="accordion-body">
-                <p>
-                  The financial sector can accelerate innovation by expanding access to venture capital, supporting
-                  fintech development, co-investing in national priorities, and enabling startup growth through tailored
-                  financial products and innovation-focused partnerships.
-                </p>
+
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-12 col-md-12">
+                <div class="accordion" id="kuwaitRankingAccordion">
+                  <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+                    data-aos-delay="100">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <span class="accordion-title text-center"><span><img src="./assets/img/researches.png"
+                              class="accordianImg" alt=""></span>Increase investment in R&amp;D</span>
+                        <span class="accordion-icon"></span>
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapsed" aria-labelledby="headingOne"
+                      data-bs-parent="#kuwaitRankingAccordion">
+                      <div class="accordion-body">
+                        <p class="text-center">
+                          Increase investment in R&amp;D and strengthen STEM education to build a robust innovation
+                          talent
+                          pipeline.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <span class="accordion-title"><span><img src="./assets/img/digital.png" class="accordianImg" alt=""></span>Enhance digital infrastructure</span>
-                <span class="accordion-icon"></span>
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#kuwaitRankingAccordion">
-              <div class="accordion-body">
-                <p>
-                  Enhance digital infrastructure and establish innovation hubs to foster cross-sector collaboration.
-                </p>
+              <div class="col-lg-6 col-md-12">
+                <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+                  data-aos-delay="100">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <span class="accordion-title"><span><img src="./assets/img/financial.png" class="accordianImg"
+                            alt=""></span>The financial sector</span>
+                      <span class="accordion-icon"></span>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#kuwaitRankingAccordion">
+                    <div class="accordion-body">
+                      <p>
+                        The financial sector can accelerate innovation by expanding access to venture capital,
+                        supporting
+                        fintech development, co-investing in national priorities, and enabling startup growth through
+                        tailored
+                        financial products and innovation-focused partnerships.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+                  data-aos-delay="300">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <span class="accordion-title"><span><img src="./assets/img/digital.png" class="accordianImg"
+                            alt=""></span>Enhance digital infrastructure</span>
+                      <span class="accordion-icon"></span>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#kuwaitRankingAccordion">
+                    <div class="accordion-body">
+                      <p>
+                        Enhance digital infrastructure and establish innovation hubs to foster cross-sector
+                        collaboration.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
 
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                <span class="accordion-title"><span><img src="./assets/img/boost.png" class="accordianImg" alt=""></span>Boost patent activity</span>
-                <span class="accordion-icon"></span>
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#kuwaitRankingAccordion">
-              <div class="accordion-body">
-                <p>
-                  Boost patent activity and promote research commercialization to increase knowledge outputs and
-                  strengthen IP laws to protect and encourage creative endeavors.
-                </p>
               </div>
-            </div>
-          </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+                  data-aos-delay="400">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      <span class="accordion-title"><span><img src="./assets/img/boost.png" class="accordianImg"
+                            alt=""></span>Boost patent activity</span>
+                      <span class="accordion-icon"></span>
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#kuwaitRankingAccordion">
+                    <div class="accordion-body">
+                      <p>
+                        Boost patent activity and promote research commercialization to increase knowledge outputs and
+                        strengthen IP laws to protect and encourage creative endeavors.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
 
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-            <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                <span class="accordion-title"><span><img src="./assets/img/support.png" class="accordianImg" alt=""></span>Support SMEs and startups</span>
-                <span class="accordion-icon"></span>
-              </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#kuwaitRankingAccordion">
-              <div class="accordion-body">
-                <p>
-                  Support SMEs and startups by improving access to finance and encouraging market-driven innovation.
-                </p>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+                  data-aos-delay="500">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      <span class="accordion-title"><span><img src="./assets/img/support.png" class="accordianImg"
+                            alt=""></span>Support SMEs and startups</span>
+                      <span class="accordion-icon"></span>
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#kuwaitRankingAccordion">
+                    <div class="accordion-body">
+                      <p>
+                        Support SMEs and startups by improving access to finance and encouraging market-driven
+                        innovation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
           </div>
           <div class="col-lg-12">
-            <h1 class=" text-center mt-5">
+            <h1 class=" text-center mt-5" id="HSA">
               <!-- <span class="section-title-a">3.6</span> -->
               <span class="section-title-b"><span class="section-title-a"><img src="./assets/img/Group157.png"
                     alt=""></span> High-Quality Scientific Articles</span>
@@ -1895,131 +1951,162 @@
               <p class="insitText">The highest share of publications was in Physical sciences and Health sciences.</p>
             </div>
 
-            
-      <div class="row mt-5">
-        <div class="col-lg-12">
-          <div class="insights-header">
-            <!-- <span class="insights-number">3.1.2</span> -->
-            <span class="insights-from">How can we enhance Kuwait’s Ranking</span>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="insights-intro">
-            <p>
-              After analysing the factors influencing the GCI ranking and considering Kuwait's innovation ecosystem with
-              its various components and contributors, the GCI ranking can be enhanced by the involvement of the
-              following sectors:
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <div class="row d-flex justify-content-center">
-        <div class="col-lg-12 col-md-12">
-          <div class="accordion" id="kuwaitRankingAccordion">
-            <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  <span class="accordion-title text-center"><span><img src="./assets/img/researches.png" class="accordianImg" alt=""></span>Increase investment in R&amp;D</span>
-                  <span class="accordion-icon"></span>
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapsed" aria-labelledby="headingOne" data-bs-parent="#kuwaitRankingAccordion">
-                <div class="accordion-body">
-                  <p class="text-center">
-                    Increase investment in R&amp;D and strengthen STEM education to build a robust innovation talent
-                    pipeline.
+            <div class="row mt-5">
+              <div class="col-lg-12">
+                <div class="insights-header">
+                  <!-- <span class="insights-number">3.1.2</span> -->
+                  <span class="insights-from">How can we enhance Kuwait’s Ranking</span>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="insights-intro">
+                  <p>
+                    After analysing the factors influencing the GCI ranking and considering Kuwait's innovation
+                    ecosystem with
+                    its various components and contributors, the GCI ranking can be enhanced by the involvement of the
+                    following sectors:
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <span class="accordion-title"><span><img src="./assets/img/financial.png" class="accordianImg" alt=""></span>The financial sector</span>
-                <span class="accordion-icon"></span>
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#kuwaitRankingAccordion">
-              <div class="accordion-body">
-                <p>
-                  The financial sector can accelerate innovation by expanding access to venture capital, supporting
-                  fintech development, co-investing in national priorities, and enabling startup growth through tailored
-                  financial products and innovation-focused partnerships.
-                </p>
+
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-12 col-md-12">
+                <div class="accordion" id="kuwaitRankingAccordion">
+                  <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+                    data-aos-delay="100">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <span class="accordion-title text-center"><span><img src="./assets/img/researches.png"
+                              class="accordianImg" alt=""></span>Increase investment in R&amp;D</span>
+                        <span class="accordion-icon"></span>
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapsed" aria-labelledby="headingOne"
+                      data-bs-parent="#kuwaitRankingAccordion">
+                      <div class="accordion-body">
+                        <p class="text-center">
+                          Increase investment in R&amp;D and strengthen STEM education to build a robust innovation
+                          talent
+                          pipeline.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <span class="accordion-title"><span><img src="./assets/img/digital.png" class="accordianImg" alt=""></span>Enhance digital infrastructure</span>
-                <span class="accordion-icon"></span>
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#kuwaitRankingAccordion">
-              <div class="accordion-body">
-                <p>
-                  Enhance digital infrastructure and establish innovation hubs to foster cross-sector collaboration.
-                </p>
+              <div class="col-lg-6 col-md-12">
+                <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+                  data-aos-delay="100">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <span class="accordion-title"><span><img src="./assets/img/financial.png" class="accordianImg"
+                            alt=""></span>The financial sector</span>
+                      <span class="accordion-icon"></span>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#kuwaitRankingAccordion">
+                    <div class="accordion-body">
+                      <p>
+                        The financial sector can accelerate innovation by expanding access to venture capital,
+                        supporting
+                        fintech development, co-investing in national priorities, and enabling startup growth through
+                        tailored
+                        financial products and innovation-focused partnerships.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+                  data-aos-delay="300">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <span class="accordion-title"><span><img src="./assets/img/digital.png" class="accordianImg"
+                            alt=""></span>Enhance digital infrastructure</span>
+                      <span class="accordion-icon"></span>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#kuwaitRankingAccordion">
+                    <div class="accordion-body">
+                      <p>
+                        Enhance digital infrastructure and establish innovation hubs to foster cross-sector
+                        collaboration.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
 
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                <span class="accordion-title"><span><img src="./assets/img/boost.png" class="accordianImg" alt=""></span>Boost patent activity</span>
-                <span class="accordion-icon"></span>
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#kuwaitRankingAccordion">
-              <div class="accordion-body">
-                <p>
-                  Boost patent activity and promote research commercialization to increase knowledge outputs and
-                  strengthen IP laws to protect and encourage creative endeavors.
-                </p>
               </div>
-            </div>
-          </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+                  data-aos-delay="400">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      <span class="accordion-title"><span><img src="./assets/img/boost.png" class="accordianImg"
+                            alt=""></span>Boost patent activity</span>
+                      <span class="accordion-icon"></span>
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#kuwaitRankingAccordion">
+                    <div class="accordion-body">
+                      <p>
+                        Boost patent activity and promote research commercialization to increase knowledge outputs and
+                        strengthen IP laws to protect and encourage creative endeavors.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
 
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-            <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                <span class="accordion-title"><span><img src="./assets/img/support.png" class="accordianImg" alt=""></span>Support SMEs and startups</span>
-                <span class="accordion-icon"></span>
-              </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#kuwaitRankingAccordion">
-              <div class="accordion-body">
-                <p>
-                  Support SMEs and startups by improving access to finance and encouraging market-driven innovation.
-                </p>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="600"
+                  data-aos-delay="500">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      <span class="accordion-title"><span><img src="./assets/img/support.png" class="accordianImg"
+                            alt=""></span>Support SMEs and startups</span>
+                      <span class="accordion-icon"></span>
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#kuwaitRankingAccordion">
+                    <div class="accordion-body">
+                      <p>
+                        Support SMEs and startups by improving access to finance and encouraging market-driven
+                        innovation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-          </div>
-        </div>
-      </div>
-      <div class="row">
+  <section class="conclusionBox">
+      <div class="container ">
+            <div class="row ">
         <div class="col-lg-12">
           <div class="conclusionBox" id="Conclusion">
-            <h1 class="text-center mb-3"><span class="section-title-c">Conclusion</span></h1>
-            <p class=" section-text1 text-center">Kuwait’s strength lies in ICT Infrastructure as it comes in the first
+            <h1 class="text-center mb-3"><span class="section-title-c text-black">Conclusion</span></h1>
+            <p class=" text-center">Kuwait’s strength lies in ICT Infrastructure as it comes in the first
               place in “ICT access” and “ICT use” indices . However, weaknesses in certain areas such as the relatively
               low ranking in high-quality scientific articles suggest a need to bolster research activities and outputs.
               Additionally, while Kuwait’s R&D expenditure shows a moderate commitment, increasing this investment could
@@ -2055,9 +2142,7 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <footer class="footerBg">
+      <footer class="footerBg">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-12 col-sm-12 footer-col">
@@ -2076,6 +2161,9 @@
       </div>
     </div>
   </footer>
+</section>
+
+
 
 
   <!-- script -->
